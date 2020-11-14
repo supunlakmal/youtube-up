@@ -44,7 +44,7 @@ def get_authenticated_service():
   credentials = flow.run_console()
   return build(API_SERVICE_NAME, API_VERSION, credentials = credentials)
 
-def initialize_upload(youtube, options):
+def initialize_upload(youtube, options ,MEDIA_FILE_PATH_GET):
   tags = None
   if options.keywords:
     tags = options.keywords.split(',')
@@ -65,7 +65,7 @@ def initialize_upload(youtube, options):
     part=','.join(body.keys()),
     body=body,
 
-    media_body=MediaFileUpload(MEDIA_FILE_PATH, chunksize=-1, resumable=True)
+    media_body=MediaFileUpload(MEDIA_FILE_PATH_GET, chunksize=-1, resumable=True)
   )
 
   resumable_upload(insert_request)
@@ -121,6 +121,6 @@ if __name__ == '__main__':
   youtube = get_authenticated_service()
 
   try:
-    initialize_upload(youtube, args)
+    initialize_upload(youtube, args,MEDIA_FILE_PATH)
   except HttpError, e:
     print 'An HTTP error %d occurred:\n%s' % (e.resp.status, e.content)
