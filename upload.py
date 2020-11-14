@@ -121,7 +121,8 @@ if __name__ == '__main__':
   FOLDER_PATH = "/content/Torrent/upload"
   entries = os.listdir(FOLDER_PATH)
   for entry in entries:
-   print(entry)
+   full_path = str( FOLDER_PATH+"/"+entry)
+   print(full_path)
 
 #   youtube = get_authenticated_service()
 
