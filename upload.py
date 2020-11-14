@@ -118,11 +118,10 @@ if __name__ == '__main__':
     default='private', help='Video privacy status.')
   args = parser.parse_args()
   
-  FOLDER_PATH = "/content/drive/My Drive/Torrent"#@param {type:"string"}
-  print(FOLDER_PATH)
-#   entries = os.listdir(str(FOLDER_PATH))
-#   for entry in entries:
-#    print(entry)
+  FOLDER_PATH = "/content/Torrent/upload"
+  entries = os.listdir(FOLDER_PATH)
+  for entry in entries:
+   print(entry)
 
 #   youtube = get_authenticated_service()
 
