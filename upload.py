@@ -119,6 +119,7 @@ if __name__ == '__main__':
   args = parser.parse_args()
   
   FOLDER_PATH = input('folder path')
+  print(FOLDER_PATH)
   entries = os.listdir(str(FOLDER_PATH))
   for entry in entries:
    print(entry)
