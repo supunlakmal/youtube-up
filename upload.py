@@ -29,7 +29,7 @@ RETRIABLE_STATUS_CODES = [500, 502, 503, 504]
 
 
 CLIENT_SECRETS_FILE = '/content/drive/My Drive/key/client_secret_472764921288-jbenv3gs9hnbtcdtbrb7gs7h2ennf6cf.apps.googleusercontent.com.json'
-MEDIA_FILE_PATH = input('Enter the path of the video you wish to upload:\n')
+MEDIA_FILE_PATH = '/content/drive/My Drive/New video.mp4'
 
 SCOPES = ['https://www.googleapis.com/auth/youtube.upload']
 API_SERVICE_NAME = 'youtube'
