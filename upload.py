@@ -118,15 +118,16 @@ if __name__ == '__main__':
     default='private', help='Video privacy status.')
   args = parser.parse_args()
   
-  FOLDER_PATH = "/content/Torrent/upload"
-  entries = os.listdir(FOLDER_PATH)
-  for entry in entries:
-   full_path = str( FOLDER_PATH+"/"+entry)
-   print(full_path)
 
-#   youtube = get_authenticated_service()
 
-#   try:
-#     initialize_upload(youtube, args,MEDIA_FILE_PATH)
-# #   except HttpError, e:
+  youtube = get_authenticated_service()
+
+  try:
+      FOLDER_PATH = "/content/Torrent/upload"
+      entries = os.listdir(FOLDER_PATH)
+      for entry in entries:
+      full_path = str( FOLDER_PATH+"/"+entry)
+      print(full_path)
+      initialize_upload(youtube, args,full_path)
+#   except HttpError, e:
 #     print 'An HTTP error %d occurred:\n%s' % (e.resp.status, e.content)
