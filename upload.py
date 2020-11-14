@@ -118,7 +118,7 @@ if __name__ == '__main__':
     default='private', help='Video privacy status.')
   args = parser.parse_args()
   
-  FOLDER_PATH = input("folder path")
+#   FOLDER_PATH = input("folder path")
   print(FOLDER_PATH)
 #   entries = os.listdir(str(FOLDER_PATH))
 #   for entry in entries:
