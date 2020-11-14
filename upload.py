@@ -117,10 +117,15 @@ if __name__ == '__main__':
   parser.add_argument('--privacyStatus', choices=VALID_PRIVACY_STATUSES,
     default='private', help='Video privacy status.')
   args = parser.parse_args()
+  
+  FOLDER_PATH = input()
+  entries = os.listdir(FOLDER_PATH)
+  for entry in entries:
+   print(entry)
 
-  youtube = get_authenticated_service()
+#   youtube = get_authenticated_service()
 
-  try:
-    initialize_upload(youtube, args,MEDIA_FILE_PATH)
-  except HttpError, e:
-    print 'An HTTP error %d occurred:\n%s' % (e.resp.status, e.content)
+#   try:
+#     initialize_upload(youtube, args,MEDIA_FILE_PATH)
+# #   except HttpError, e:
+#     print 'An HTTP error %d occurred:\n%s' % (e.resp.status, e.content)
